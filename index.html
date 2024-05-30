@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily News</title>
+    <link href="img/icon.png" rel="icon" type="image/x-icon" alt="Logo" />
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+   .header-content img{
+   height: 160px;
+   width: 260px;
+   padding-bottom: 10px;
+   transition: transform 0.3s ease;
+}
+
+.shift-left {
+  position: relative;
+  left: -200px; 
+}
+
+.header-content img:hover{
+    transform: scale(1.05);
+}
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <p class="icon">&#128197;</p>
+            <b><p><div id="date-day"></div></p></b>
+         <img id="logo" src="img/logo.png" alt="logo" class="shift-left">
+            <div class="auth-buttons">
+                <a href="sign-out.html" class="auth-button2">Login &#128100;</a>
+                <a href="sign-in.html" class="auth-button">&#128276;</a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+           <b><li><a href="index.html">Home</a></li></b>
+           <b><li><a href="health.html">Health</a></li></b>
+            <b><li><a href="sports.html">Sports</a></li></b>
+            <b><li><a href="technology.html">Technology</a></li></b>
+            <b><li><a href="entertainment.html">Entertainment</a></li></b>
+
+            <div class="dropdown">
+                <div class="hamburger-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="business.html">Business</a>
+                    <a href="education.html">Education</a>
+                    <a href="environment.html">Environment</a>
+                    <a href="politics.html">Politics</a>
+                    <a href="tourism.html">Tourism</a>
+                </div>
+            </div>
+                
+                <label for="select">Select Countries:</label>
+                <select id="selectOption" onchange="window.location.href = this.value;">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="au.html">Australia</option>
+                    <option value="br.html">Brazil</option>
+                    <option value="ca.html">Canada</option>
+                    <option value="cn.html">China</option>
+                    <option value="de.html">Germany</option>
+                    <option value="in.html">India</option>
+                    <option value="il.html">Israel</option>
+                    <option value="it.html">Italy</option>
+                    <option value="jp.html">Japan</option>
+                    <option value="my.html">Malaysia</option>
+                    <option value="nz.html">New Zealand</option>
+                    <option value="ru.html">Russia</option>
+                    <option value="za.html">South Africa</option>
+                    <option value="kr.html">South Korea</option>
+                    <option value="ch.html">Switzerland</option>
+                    <option value="ae.html">UAE</option>
+                    <option value="gb.html">UK</option>
+                    <option value="ua.html">Ukraine</option>
+                    <option value="us.html">US</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="articles-container">
+    </main>
+
+    <footer>
+        <p>&copy; The Daily News Website. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
